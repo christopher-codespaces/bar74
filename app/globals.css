@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-warm-white: #FAF7F2;
+  --color-cream: #F5F0E8;
+  --color-terracotta: #C4704A;
+  --color-terracotta-light: #E8927A;
+  --color-olive: #6B7A45;
+  --color-olive-light: #8C9E5E;
+  --color-charcoal: #2C2A25;
+  --color-sand: #E8DCC8;
+  --color-forest: #2D4A2D;
+  --color-dark: #1A1A1A;
+
+  /* Fonts */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-script: var(--font-dancing), cursive;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #1A1A1A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-terracotta);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta-light);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-terracotta);
+  color: white;
+}
+
+/* Typography utilities */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
